@@ -1,6 +1,6 @@
 
 FLAGS=$(CFLAGS) -Wall -pedantic -Wextra -std=c99
-PROGS=format noreturn const unused nonnull
+PROGS=format noreturn const unused nonnull returnsnonnull
 
 .PHONY=all
 all: $(PROGS)
@@ -23,6 +23,10 @@ unused: unused.c
 
 .PHONY=nonnull
 nonnull: nonnull.c
+	$(CC) $(FLAGS) $^ -o $@
+
+.PHONY=returnsnonnull
+returnsnonnull: returnsnonnull.c
 	$(CC) $(FLAGS) $^ -o $@
 
 .PHONY=clean
