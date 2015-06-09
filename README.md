@@ -1,4 +1,4 @@
 # examples
 
 !without warranty!  
-!some examples may be ugly, stupid and especially nonfunctional!
+!some examples may be unfinished, ugly, stupid and especially nonfunctional!
