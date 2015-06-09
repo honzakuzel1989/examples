@@ -1,7 +1,7 @@
 
 CFLAGS=-Wall -W -pedantic -Wextra -std=c99
 PROGS=stdargex atexitex sort search macros argc env mainreturn mallperturb fsattack errnoex errorlist \
-	nonlocaljump assertex stddefex timeex 2darray getoptex anonstruct loop
+	nonlocaljump assertex stddefex timeex 2darray getoptex anonstruct loop ordandchr memory_hooks
 
 .PHONY=all clean $(PROGS)
 
@@ -55,9 +55,6 @@ stddefex: stddefex.c
 timeex: timeex.c
 	$(CC) $(CFLAGS) $^ -o $@
 
-array: array.c
-	$(CC) $(CFLAGS) $^ -o $@
-
 getoptex: getoptex.c
 	$(CC) $(CFLAGS) $^ -o $@
 
@@ -65,6 +62,9 @@ anonstruct: anonstruct.c
 	$(CC) $(CFLAGS) $^ -o $@
 
 loop: loop.c
+	$(CC) $(CFLAGS) $^ -o $@
+
+memory_hook: memory_hook.c
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
