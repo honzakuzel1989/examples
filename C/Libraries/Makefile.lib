@@ -1,0 +1,28 @@
+
+CC=gcc
+CFLAGS=-Wall -W -pedantic -g -std=c99
+AR=ar
+ARFLAGS=crs
+
+all:staticlibrary dynamiclibrary staticlibraryapp dynamiclibraryapp libraryloader
+
+staticlibrary: library.h
+	$(CC) $(CFLAGS) -c library.c -o library.o
+	$(AR) $(ARFLAGS) library.a library.o
+
+staticlibraryapp:
+	$(CC) $(CFLAGS) -static libraryapp.c -L. -lrary -o staticlibraryapp
+
+#http://www.cprogramming.com/tutorial/shared-libraries-linux-gcc.html	
+dynamiclibrary: library.h
+	$(CC) $(CFLAGS) -c -fPIC library.c -o library.o
+	$(CC) -shared -fPIC -o library.so library.o
+	
+dynamiclibraryapp:
+	$(CC) $(CFLAGS) libraryapp.c -L. -Wl,-rpath=. -lrary -o dynamiclibraryapp
+	
+libraryloader:
+	$(CC) $(CFLAGS) libraryloader.c -L. -ldl -o libraryloader 
+	
+clean:
+	rm -f transparentunion dynamiclibrary* staticlibrary* libraryloader *.so *.a
