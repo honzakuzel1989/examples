@@ -1,0 +1,20 @@
+#!/urs/bin/env bash
+
+cat -n main.c
+
+#preprocessing
+cpp main.c | tee main.i
+
+cat -n main.i
+
+#compilation
+gcc -Wall -S main.i
+
+cat -n main.s
+
+#assembly
+as main.s -o main.o
+
+#linking (nnking is done but executable file not working)
+#see details in gcc -v *.c listing
+ld --eh-frame-hdr -m elf_x86_64 --hash-style=both -dynamic-linker /lib/ld-linux.so.2 /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/i686-linux-gnu/4.8.1/ -L/usr/lib/ main.o -L/usr/lib/gcc/x86_64-linux-gnu/4.7/ -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o
