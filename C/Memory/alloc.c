@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// try valgrind ./alloc for check memory leaks 
+
 #define ERROR(str) { \
 	perror(str); \
 	return EXIT_FAILURE; \

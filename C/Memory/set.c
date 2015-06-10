@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// try valgrind ./set for check memory leaks 
+
 static void die() __attribute__((__noreturn__));
 
 static void die(const char *error)
