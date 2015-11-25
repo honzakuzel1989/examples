@@ -1,0 +1,24 @@
+Microsoft (R) .NET Framework CasPol 2.0.50727.5420
+Copyright (c) Microsoft Corporation. Vçechna pr va vyhrazena.
+
+ZabezpeŸen¡ je ON.
+Kontrola spouçtØn¡ je ON.
+Vìzva ke zmØnØ z sad je ON.
+
+éroveå = Machine
+
+K¢dov‚ skupiny:
+
+1. All_Code: K¢dov  skupina neudØluje § dn  opr vnØn¡ a vytv ı¡ koıen stromu k¢dovìch skupin.
+   1.1. My_Computer_Zone: K¢dov  skupina udØluje plnou d…vØryhodnost k¢du poch zej¡c¡ho z m¡stn¡ho poŸ¡taŸe.
+      1.1.1. Microsoft_Strong_Name: K¢dov  skupina udØluje plnou d…vØryhodnost k¢du podepsan‚mu pomoc¡ siln‚ho n zvu spoleŸnosti Microsoft.
+      1.1.2. ECMA_Strong_Name: K¢dov  skupina udØluje plnou d…vØryhodnost k¢du podepsan‚mu pomoc¡ siln‚ho n zvu ECMA.
+   1.2. LocalIntranet_Zone: K¢dov  skupina udØluje k¢du ze z¢ny intranetu sadu opr vnØn¡ s¡tØ intranet. Tato sada opr vnØn¡ udØluje k¢du poch zej¡c¡mu z intranetu pr vo pou§¡vat izolovan‚ £lo§içtØ, £plnì pı¡stup k u§ivatelsk‚mu rozhran¡, urŸit‚ mo§nosti prov dØn¡ reflexe a omezenì pı¡stup k promØnnìm prostıed¡.
+      1.2.1. Intranet_Same_Site_Access: Veçkerì k¢d poch zej¡c¡ z intranetu z¡sk  pr vo na zpØtn‚ pıipojen¡ k p…vodn¡mu serveru.
+      1.2.2. Intranet_Same_Directory_Access: Veçkerì k¢d poch zej¡c¡ z intranetu z¡sk  pr vo pro Ÿten¡ z pı¡sluçn‚ho instalaŸn¡ho adres ıe.
+   1.3. Internet_Zone: K¢dov  skupina udØluje k¢du ze z¢ny Internetu sadu opr vnØn¡ s¡tØ Internet. Tato sada opr vnØn¡ udØluje k¢du poch zej¡c¡mu z Internetu pr vo pou§¡vat izolovan‚ £lo§içtØ a omezenì pı¡stup k u§ivatelsk‚mu rozhran¡.
+      1.3.1. Internet_Same_Site_Access: Veçkerì k¢d poch zej¡c¡ z Internetu z¡sk  pr vo na zpØtn‚ pıipojen¡ k p…vodn¡mu serveru.
+   1.4. Restricted_Zone: K¢d poch zej¡c¡ ze zak zan‚ z¢ny nez¡sk  § dn  opr vnØn¡.
+   1.5. Trusted_Zone: K¢du z d…vØryhodn‚ z¢ny je udØlena sada opr vnØn¡ Internetu. Tato sada opr vnØn¡ udØluje pr vo pou§¡vat izolovan‚ £lo§içtØ a omezenì pı¡stup k u§ivatelsk‚mu rozhran¡.
+      1.5.1. Trusted_Same_Site_Access: Veçkerì d…vØryhodnì k¢d z¡sk  pr vo na zpØtn‚ pıipojen¡ k p…vodn¡mu serveru.
+éspØch

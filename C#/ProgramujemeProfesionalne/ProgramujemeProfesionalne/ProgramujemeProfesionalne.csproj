@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B2CD920-1F92-4F46-8A94-6DEA59A73AD9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProgramujemeProfesionalne</RootNamespace>
+    <AssemblyName>ProgramujemeProfesionalne</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\07-DelegatesAndEvents\07-DelegatesAndEvents.csproj">
+      <Project>{0B394E78-D47A-4187-AC9F-89B1F85B9A6D}</Project>
+      <Name>07-DelegatesAndEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\09-Genericity\09-Genericity.csproj">
+      <Project>{1E252E55-BEBF-4E82-A4BE-ADB424F93061}</Project>
+      <Name>09-Genericity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\11-Linq\11-Linq.csproj">
+      <Project>{5F54D2BA-3DEC-49DC-9981-B3EFDC748595}</Project>
+      <Name>11-Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\13-Reflection\13-Reflection.csproj">
+      <Project>{AB7620E3-3C5D-41B3-981F-2C58F5736667}</Project>
+      <Name>13-Reflection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\08-StringsAndRegexs\08-StringsAndRegexs.csproj">
+      <Project>{176E1CE1-3BFB-47C8-B4BA-F0189BDBFF39}</Project>
+      <Name>08-StringsAndRegexs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\12-MemoryManagmentAndPointers\12-MemoryManagmentAndPointers.csproj">
+      <Project>{157F4857-BB1D-47D7-AE10-36870302B1BC}</Project>
+      <Name>12-MemoryManagmentAndPointers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\17-Assemblies\17-Assemblies.csproj">
+      <Project>{1B3EF239-C6F5-46E0-BE4A-B6CA16825E3D}</Project>
+      <Name>17-Assemblies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\18-TracingAndEvents\18-TracingAndEvents.csproj">
+      <Project>{5CB02515-EAB2-4537-852C-2811CAB23BEF}</Project>
+      <Name>18-TracingAndEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\19-SubprocessesAndSynchronization\19-SubprocessesAndSynchronization.csproj">
+      <Project>{0334E662-12D9-4B24-B5CA-C1A100C94768}</Project>
+      <Name>19-SubprocessesAndSynchronization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\20-Security\20-Security.csproj">
+      <Project>{5416E51C-A5F2-46B4-B915-21821E0512A0}</Project>
+      <Name>20-Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\21-Localization\21-Localization.csproj">
+      <Project>{3F3E59A1-4033-4DAA-8DE1-CFA37BBFE694}</Project>
+      <Name>21-Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\28-ManipulationWithXml\28-ManipulationWithXml.csproj">
+      <Project>{6D38C933-F3D8-4CCE-BDB4-73316887E9EC}</Project>
+      <Name>28-ManipulationWithXml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\29-LinqForXml\29-LinqForXml.csproj">
+      <Project>{FDE67F36-4866-492F-815D-EE9CA109639B}</Project>
+      <Name>29-LinqForXml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{57336786-25A4-498C-AC91-7A813C68C078}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
