@@ -9,8 +9,20 @@ namespace ParallelEx
 {
     class Program
     {
+        private static void A()
+        {
+            Console.WriteLine($"{Thread.CurrentThread.ManagedThreadId}");
+            Thread.Sleep(500);
+        }
+
         static void Body()
         {
+            /*
+             * For(<>)
+             */
+
+            Console.WriteLine("For #1");
+
             // Print for index and thread id
             var res = Parallel.For(0, 100, (i) =>
             {
@@ -21,6 +33,8 @@ namespace ParallelEx
             Console.WriteLine($"{res.IsCompleted} ({res.LowestBreakIteration})");
 
             // Waiting until finish each action - something like barrier (!)
+
+            Console.WriteLine("For #2");
 
             res = new ParallelLoopResult();
             res = Parallel.For(0, 100, (i, p) =>
@@ -34,6 +48,8 @@ namespace ParallelEx
             // False, of course, and empty lowest break iteration = 10
             Console.WriteLine($"{res.IsCompleted} ({res.LowestBreakIteration})");
 
+            Console.WriteLine("For #3");
+
             res = new ParallelLoopResult();
             res = Parallel.For(0, 20, (i, p) =>
             {
@@ -46,17 +62,21 @@ namespace ParallelEx
             // False, of course, and empty
             Console.WriteLine($"{res.IsCompleted} ({res.LowestBreakIteration})");
 
+            Console.WriteLine("For #4");
+
             res = new ParallelLoopResult();
             res = Parallel.For(0, 200, new ParallelOptions { MaxDegreeOfParallelism = 3, }, (i) =>
             {
                 Console.WriteLine($"{i}:{Thread.CurrentThread.ManagedThreadId}");
             });
 
+            Console.WriteLine("For #5");
+
             Parallel.For(0, 100,
                 // Init - for each task
                 () => { return 0; },
                 // Body - for each loop
-                (index, _, init) => 
+                (index, _, init) =>
                 {
                     Console.WriteLine($"{index}:{Thread.CurrentThread.ManagedThreadId}");
                     init++;
@@ -64,9 +84,16 @@ namespace ParallelEx
                 },
                 // Final - for each task
                 (result) => { Console.WriteLine($"Final result = {result}:{Thread.CurrentThread.ManagedThreadId}"); });
+
+            /*
+             * Invoke
+             */
+
+            Console.WriteLine("Invoke #1");
+            Parallel.Invoke(A, A, A, A, A, A);
+            Console.WriteLine("Invoke #2");
+            Parallel.Invoke(new ParallelOptions { MaxDegreeOfParallelism = 4 }, A, A, A, A, A, A, A, A, A, A, A, A);
         }
-
-
 
         static void Main(string[] args)
         {
