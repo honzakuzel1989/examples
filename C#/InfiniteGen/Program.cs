@@ -11,6 +11,7 @@ namespace InfiniteGen
     {
         static IEnumerable<int> GetNumber()
         {
+            // Infinite generator
             int count = 0;
             while (true)
             {
