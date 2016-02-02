@@ -54,10 +54,16 @@ namespace SmartEnum.src.dp
             yield return Rectangle;
         }
 
+        public static Shape GetShapeByName(string name)
+        {
+            return GetAllShapes().Where(s => s.Name == name).FirstOrDefault();
+        }
+
         // Since this is simply a C# class, developers can define any methods they want, override ToString(), and easily unit test any code in this class.
         public override string ToString()
         {
             return $"Smart shape {Name} ({Description})";
         }
+
     }
 }

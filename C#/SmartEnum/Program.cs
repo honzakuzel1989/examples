@@ -22,6 +22,8 @@ namespace SmartEnum
             foreach (var s in Shape.GetAllShapes())
                 WriteLine(s.Name);
 
+            WriteLine(Shape.GetShapeByName(Shape.Rectangle.Name));
+            WriteLine(Shape.GetShapeByName("nonexisting name") == null ? "null" : "non-null");
 
             ReadLine();
         }
