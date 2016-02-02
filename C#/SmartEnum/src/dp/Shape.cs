@@ -36,8 +36,8 @@ namespace SmartEnum.src.dp
         static Shape()
         {
             Circle = new Shape("Circle", "first smart enum shape item");
-            Square = new Shape("Circle", "second smart enum shape item");
-            Rectangle = new Shape("Third", "third smart enum shape item");
+            Square = new Shape("Square", "second smart enum shape item");
+            Rectangle = new Shape("Rectangle", "third smart enum shape item");
         }
 
         // The constructor is made private since all Shapes are declared in the class itself.
@@ -45,6 +45,13 @@ namespace SmartEnum.src.dp
         {
             Name = name;
             Description = desctiption;
+        }
+
+        public static IEnumerable<Shape> GetAllShapes()
+        {
+            yield return Circle;
+            yield return Square;
+            yield return Rectangle;
         }
 
         // Since this is simply a C# class, developers can define any methods they want, override ToString(), and easily unit test any code in this class.
