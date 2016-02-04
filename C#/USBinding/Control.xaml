@@ -15,7 +15,7 @@
                  Margin="3"
                  VerticalAlignment="Center"/>
             <TextBox Text="{Binding Path=Value, UpdateSourceTrigger=PropertyChanged}"
-               Width="100"
+               Width="500"
                Margin="3"/>
         </StackPanel>
     </Grid>

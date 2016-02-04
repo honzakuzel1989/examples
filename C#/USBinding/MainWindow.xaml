@@ -8,8 +8,11 @@
     d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
         <StackPanel Orientation="Vertical"
-                HorizontalAlignment="Left"
+                HorizontalAlignment="Stretch"
                 Margin="10">
+            <local:Control VerticalAlignment="Top"
+                              Label="Source:"
+                              Value="http://blog.scottlogic.com/2012/02/06/a-simple-pattern-for-creating-re-useable-usercontrols-in-wpf-silverlight.html"/>
             <local:Control VerticalAlignment="Top"
                               Label="Height:"
                               Value="{Binding Height}"/>
