@@ -11,6 +11,19 @@ namespace ConditionalBreakpointPerformance
     {
         static IList<string> GetItems(char c, int num)
         {
+            //Generate num: of strings with 0-num c: character
+            //for example (c='o', num=10):
+            //"o"
+            //"oo"
+            //"ooo"
+            //"oooo"
+            //"ooooo"
+            //"oooooo"
+            //"ooooooo"
+            //"oooooooo"
+            //"ooooooooo"
+            //"oooooooooo"
+
             StringBuilder b = new StringBuilder(num);
             IList<string> l = new List<string>();
 
