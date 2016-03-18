@@ -15,8 +15,11 @@ namespace StaticFieldInGenericClass
             C<float> cf = new C<float>(42f);
             C<char> cc = new C<char>('x');
 
+            C<float> cf2 = new C<float>(12f);
+
             Console.WriteLine(ci);
             Console.WriteLine(cd);
+            // 12 (!)
             Console.WriteLine(cf);
             Console.WriteLine(cc);
 
