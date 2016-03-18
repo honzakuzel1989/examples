@@ -4,14 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DependencyPropertyInitValue"
-             mc:Ignorable="d">
-    <Grid>
+             mc:Ignorable="d"
+             x:Name="parent">
+    <Grid DataContext="{Binding ElementName=parent}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Grid.Column="0" IsEnabled="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="150">1</TextBox>
-        <TextBox Grid.Column="1" IsEnabled="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="150">2</TextBox>
+        <TextBox Grid.Column="0" IsEnabled="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="150" Text="{Binding _1}"/>
+        <TextBox Grid.Column="1" IsEnabled="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="150" Text="{Binding _2}"/>
     </Grid>
 </UserControl>

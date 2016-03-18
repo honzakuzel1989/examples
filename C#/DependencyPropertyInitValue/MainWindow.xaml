@@ -6,5 +6,7 @@
         xmlns:local="clr-namespace:DependencyPropertyInitValue"
         mc:Ignorable="d"
         Title="MainWindow">
-    <local:CustomControl />
+    <local:CustomControl 
+        _1="{Binding __1}"
+        _2="{Binding __2}"/>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Console;
 
 namespace DependencyPropertyInitValue
 {
@@ -20,16 +21,10 @@ namespace DependencyPropertyInitValue
     /// </summary>
     public partial class CustomControl : UserControl
     {
-        public static readonly DependencyProperty _1Property = DependencyProperty.Register(nameof(_1), typeof(string), typeof(CustomControl), new UIPropertyMetadata(string.Empty,
+        public static readonly DependencyProperty _1Property = DependencyProperty.Register(nameof(_1), typeof(string), typeof(CustomControl), new UIPropertyMetadata("x",
             (d, e) =>
             {
-
-            }));
-
-        public static readonly DependencyProperty _2Property = DependencyProperty.Register(nameof(_2), typeof(string), typeof(CustomControl), new UIPropertyMetadata(string.Empty,
-            (d, e) =>
-            {
-
+                WriteLine($"{_1Property} changed: {e.OldValue} -> {e.NewValue}");
             }));
 
         public string _1
@@ -41,6 +36,12 @@ namespace DependencyPropertyInitValue
                 SetValue(_1Property, value);
             }
         }
+
+        public static readonly DependencyProperty _2Property = DependencyProperty.Register(nameof(_2), typeof(string), typeof(CustomControl), new UIPropertyMetadata("x",
+            (d, e) =>
+            {
+                WriteLine($"{_2Property} changed: {e.OldValue} -> {e.NewValue}");
+            }));
 
         public string _2
         {
