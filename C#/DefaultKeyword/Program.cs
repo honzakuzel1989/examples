@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Source: stackoverflow.com/questions/2432909
+
 namespace DefaultKeyword
 {
     class Program
