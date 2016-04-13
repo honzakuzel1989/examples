@@ -11,6 +11,7 @@ $uri = "http://mirror.internode.on.net/pub/test/10meg.test"
 $of = "10meg.test"
 
 # web client
+# (!) output is buffered to disk -> great speed
 $wc = New-Object System.Net.WebClient
 
 Register-ObjectEvent -InputObject $wc -EventName DownloadProgressChanged -Action {
