@@ -1,3 +1,7 @@
+param(
+    [parameter(Mandatory)]
+    [string] $Parent
+)
 
-echo "Post..."
-sleep 5
+echo "Post for $Parent..."
+sleep 3

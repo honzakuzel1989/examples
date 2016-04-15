@@ -2,6 +2,7 @@
 # ss64.com/ps/call.html
 # 
 
+$scriptName = $MyInvocation.MyCommand.Name
 $scriptPath = Split-Path $MyInvocation.InvocationName
 
 #The call operator (&) to force PowerShell to treat the string as a command to be executed.
@@ -22,14 +23,14 @@ echo "Init action..."
 
 # block current script
 if(Test-Path subscript-pre.ps1){
-    . "$scriptPath\subscript-pre.ps1"
+    . "$scriptPath\subscript-pre.ps1" -Parent $scriptName
 }
 
 echo "Some action..."
 
 # block current script
 if(Test-Path subscript-post.ps1){
-    . "$scriptPath\subscript-post.ps1"
+    . "$scriptPath\subscript-post.ps1" -Parent $scriptName
 }
 
 echo "End action..."
