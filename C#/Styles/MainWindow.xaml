@@ -20,6 +20,9 @@
         <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
             <Setter Property="Foreground" Value="Yellow"/>
         </Style>
+
+        <!-- suppression sttyle -->
+        <!--<Style TargetType="Button"/>-->
     </Window.Resources>
     <StackPanel>
         <!-- using default style -->
