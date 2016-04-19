@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Styles"
         mc:Ignorable="d"
-        Title="MainWindow" Height="220" Width="175">
+        Title="MainWindow" Height="300" Width="175">
     <Window.Resources>
         <!-- override default style -->
         <Style TargetType="Button" x:Key="GreenButton" BasedOn="{StaticResource {x:Type Button}}">
@@ -15,6 +15,11 @@
         <Style TargetType="Button" x:Key="OpacityGreenButton" BasedOn="{StaticResource GreenButton}">
             <Setter Property="Opacity" Value="0.5"/>
         </Style>
+
+        <!-- override default style too (without key) -->
+        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Foreground" Value="Yellow"/>
+        </Style>
     </Window.Resources>
     <StackPanel>
         <!-- using default style -->
@@ -23,5 +28,7 @@
         <Button Content="Button" Style="{StaticResource GreenButton}"/>
         <!-- using override GreenButton style -->
         <Button Content="Button" Style="{StaticResource OpacityGreenButton}"/>
+        <!-- using default style -->
+        <Button Content="Button" />
     </StackPanel>
 </Window>
