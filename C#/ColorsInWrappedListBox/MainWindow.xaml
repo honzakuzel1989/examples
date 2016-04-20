@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorsInWrappedListBox"
         mc:Ignorable="d"
-        Title="ColorsInWrappedListBox" Height="350" Width="525">
+        Title="ColorsInWrappedListBox" Height="750" Width="500">
     <Grid>
         <ListBox ItemsSource="{Binding ColorsData}"
+                 SelectedItem="{Binding SelectedColorData, Mode=TwoWay}"
                  HorizontalContentAlignment="Stretch"
                  HorizontalAlignment="Center"
                  SelectionMode="Single"
@@ -22,6 +23,7 @@
                 <Style TargetType="ListBoxItem">
                     <Setter Property="Margin" Value="-1" />
                     <Setter Property="Padding" Value="0" />
+                    <Setter Property="Background" Value="{Binding Color}" />
                 </Style>
             </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
@@ -38,13 +40,15 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Grid.Row="0" 
+                                       FontWeight="Medium"
                                        HorizontalAlignment="Center"
                                    Text="{Binding Name}"/>
                             <TextBlock Grid.Row="1" 
+                                       FontWeight="Medium"
                                        HorizontalAlignment="Center"
                                    Text="{Binding Code}" />
-                            <TextBlock Grid.Row="2" 
-                                   Background="{Binding Color}" />
+                            <!--<TextBlock Grid.Row="2" 
+                                   Background="{Binding Color}" />-->
                         </Grid>
                     </Border>
                 </DataTemplate>

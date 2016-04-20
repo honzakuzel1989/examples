@@ -26,9 +26,15 @@ namespace ColorsInWrappedListBox
             public string Name { get; set; }
             public Brush Color { get; set; }
             public string Code { get; set; }
+
+            public override string ToString()
+            {
+                return $"{Name} ({Code})";
+            }
         }
 
         public IEnumerable<ColorData> ColorsData { get; set; }
+        public ColorData SelectedColorData { set { Title = value.ToString(); } }
 
         public MainWindow()
         {
@@ -49,7 +55,7 @@ namespace ColorsInWrappedListBox
             {
                 Brush b = (Brush)pi.GetValue(this);
                 if (b != null)
-                    colors.Add(new ColorData { Name = $"{pi.Name}", Code = $"x", Color = b});
+                    colors.Add(new ColorData { Name = $"{pi.Name}", Code = b.ToString(), Color = b });
             }
 
             return colors;
