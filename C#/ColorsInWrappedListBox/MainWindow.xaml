@@ -9,17 +9,18 @@
     <Grid>
         <ListBox ItemsSource="{Binding ColorsData}"
                  HorizontalContentAlignment="Stretch"
+                 HorizontalAlignment="Center"
                  SelectionMode="Single"
                  Background="White"
-                 ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapPanel Orientation="Vertical" IsItemsHost="True"/>
+                    <WrapPanel Orientation="Horizontal" IsItemsHost="True"/>
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
-                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="Margin" Value="-1" />
                     <Setter Property="Padding" Value="0" />
                 </Style>
             </ListBox.ItemContainerStyle>
@@ -33,7 +34,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="150"/>
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Grid.Row="0" 
