@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BaseVIewModel.cs" />
+    <Compile Include="Command.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="IWindow.cs" />
     <Compile Include="MainWindow.xaml.cs">

@@ -8,5 +8,6 @@ namespace ModuleGenerator
 {
     class MainWindowModel : IModel
     {
+
     }
 }
