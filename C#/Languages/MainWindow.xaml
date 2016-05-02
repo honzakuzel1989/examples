@@ -1,0 +1,11 @@
+﻿<Window x:Class="Languages.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Languages"
+        xmlns:p="clr-namespace:Languages.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static p:Resources.MainWindow}" d:DesignWidth="554" d:DesignHeight="272">
+    <TextBlock Text="{Binding CurrentCulture}" TextAlignment="Center" FontSize="22" FontWeight="DemiBold"/>
+</Window>
