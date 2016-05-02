@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow">
     <StackPanel>
-        <Button Content="Choose" HorizontalAlignment="Center" Command=""/>
+        <Button Content="Choose" HorizontalAlignment="Center" Command="{Binding ChooseDirectoryCommand}"/>
+        <TextBlock Text="{Binding Path}" HorizontalAlignment="Center"/>
         <TreeView>
-            
+
         </TreeView>
     </StackPanel>
 </Window>

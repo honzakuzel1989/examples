@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace ModuleGenerator
 {
@@ -33,7 +34,7 @@ namespace ModuleGenerator
             this.View.DataContext = this;
         }
 
-        public void Notify(string propertyName)
+        public void Notify([CallerMemberName] string propertyName = null)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
