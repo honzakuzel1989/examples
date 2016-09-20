@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	if(argc == 3)
 	{
 		char * res = NULL;
-		printf("%s\n", concat(argv[1], argv[2]));
+		printf("%s\n", res = concat(argv[1], argv[2]));
 		free(res);
 	}
 	else
