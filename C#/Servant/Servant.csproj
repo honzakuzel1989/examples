@@ -57,6 +57,14 @@
     <Compile Include="src\ex2\IServiced.cs" />
     <Compile Include="src\ex2\Servant.cs" />
     <Compile Include="src\ex2\User.cs" />
+    <Compile Include="src\ex3\Bike.cs" />
+    <Compile Include="src\ex3\Boat.cs" />
+    <Compile Include="src\ex3\Car.cs" />
+    <Compile Include="src\ex3\IMove.cs" />
+    <Compile Include="src\ex3\MotorBike.cs" />
+    <Compile Include="src\ex3\Pedestrian.cs" />
+    <Compile Include="src\ex3\Plane.cs" />
+    <Compile Include="src\ex3\MoveServant.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
