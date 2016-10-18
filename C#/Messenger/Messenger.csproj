@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\ex1\Location.cs" />
+    <Compile Include="src\ex1\Coordinates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
