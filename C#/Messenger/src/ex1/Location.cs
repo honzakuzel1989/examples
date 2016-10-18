@@ -6,24 +6,10 @@ using System.Threading.Tasks;
 
 namespace Messenger.src.ex1
 {
-    // Messenger (!)
-    class Coordinates
+    class Location
     {
-        // READONLY (!)
-        public readonly double Lat;
-        public readonly double Lon;
-        public readonly double Alt;
-        // or
-        //public double Lat { get; }
-        // ...
-
-
-        public Coordinates(double lat, double lon, double alt)
-        {
-            // Set only once - immutable
-            Lat = lat;
-            Lon = lon;
-            Alt = alt;
-        }
+        // Location has Name and Coordinates
+        public string Name { get; set; }
+        public Coordinates Coordinates { get; set; }
     }
 }
