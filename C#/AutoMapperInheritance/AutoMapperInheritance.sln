@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapperInheritance", "AutoMapperInheritance.csproj", "{9463CCE7-80E4-4FE1-9F95-9CDF09FAFD7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "Base\Base.csproj", "{5CDA829F-5247-4DFF-96FC-E61520D32EC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inherited", "Inherited\Inherited.csproj", "{9CA0815F-6BCF-4A17-BAAF-92CC92E8709F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9463CCE7-80E4-4FE1-9F95-9CDF09FAFD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9463CCE7-80E4-4FE1-9F95-9CDF09FAFD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9463CCE7-80E4-4FE1-9F95-9CDF09FAFD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9463CCE7-80E4-4FE1-9F95-9CDF09FAFD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CDA829F-5247-4DFF-96FC-E61520D32EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CDA829F-5247-4DFF-96FC-E61520D32EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CDA829F-5247-4DFF-96FC-E61520D32EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CDA829F-5247-4DFF-96FC-E61520D32EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA0815F-6BCF-4A17-BAAF-92CC92E8709F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA0815F-6BCF-4A17-BAAF-92CC92E8709F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA0815F-6BCF-4A17-BAAF-92CC92E8709F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA0815F-6BCF-4A17-BAAF-92CC92E8709F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
