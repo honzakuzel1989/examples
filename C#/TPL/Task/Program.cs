@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using static System.Console;
 
@@ -40,7 +41,25 @@ namespace TaskExample
             computeFactorial.Start();
             WriteLine($"computeFactorial.Result={computeFactorial.Result}");
 
+            // cancelation token
+            CancellationTokenSource cts = new CancellationTokenSource();
+            CancellationToken t = cts.Token;
+
+            Task.Factory.StartNew(() => cancellationAction(t));
+            Thread.Sleep(5000);
+            cts.Cancel();
+
+            // t.Register(callback) - register callback after cancellation
+            Task.Run(() => { }, t);
+
             Console.ReadLine();
+        }
+
+        private static void cancellationAction(CancellationToken token)
+        {
+            while (!token.IsCancellationRequested)
+                Thread.Sleep(1000);
+            WriteLine("IsCancellationRequested");
         }
 
         private static int computeFactorialAction(object o)
@@ -52,6 +71,8 @@ namespace TaskExample
         {
             if (v == 0)
                 return 1;
+
+
 
             return v * Factorial(v - 1);
         }
