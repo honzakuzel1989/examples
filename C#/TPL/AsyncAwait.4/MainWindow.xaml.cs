@@ -95,7 +95,7 @@ namespace AsyncAwait._4
             tb.Text += file1;
         }
 
-        private void ReadLenghtBytesFromFileAsync(string filename, int length)
+        private async Task ReadLenghtBytesFromFileAsync(string filename, int length)
         {
             byte[] buffer = new byte[length];
             var s = new FileStream(filename, FileMode.Open);
@@ -115,17 +115,16 @@ namespace AsyncAwait._4
 
             // OR
 
-            new TaskFactory().FromAsync(s.BeginRead(buffer, 0, buffer.Length, (_) =>
-            {
-                Console.WriteLine(Encoding.Default.GetString(buffer));
-                s.Close();
-                s.Dispose();
-            }, null), (r) => s.EndRead(r));
+            await Task.Factory.FromAsync(s.BeginRead(buffer, 0, buffer.Length, null, null), (r) => s.EndRead(r));
+
+            s.Close();
+            s.Dispose();
+            tb.Text = Encoding.Default.GetString(buffer);
         }
 
-        private void b6_Click(object sender, RoutedEventArgs e)
+        private async void b6_Click(object sender, RoutedEventArgs e)
         {
-            ReadLenghtBytesFromFileAsync("File1.txt", 4096);
+            await ReadLenghtBytesFromFileAsync("File1.txt", 4096);
         }
     }
 }
