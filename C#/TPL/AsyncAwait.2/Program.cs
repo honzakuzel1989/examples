@@ -16,6 +16,9 @@ namespace AsyncAwait._2
             WriteLine($"1:{CurrentThread.NameOrId()}");
             Task.Run(() =>
             {
+                //Thread.Sleep(5000);
+                Task.Delay(5000).Wait();
+
                 // Task.Run use new thread (from threadpool)
                 WriteLine($"2:{CurrentThread.NameOrId()}");
             });
