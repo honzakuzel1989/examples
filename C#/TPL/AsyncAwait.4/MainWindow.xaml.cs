@@ -91,8 +91,9 @@ namespace AsyncAwait._4
             string file1 = string.Empty;
             using (var sr = new StreamReader(filename))
                 file1 = await sr.ReadToEndAsync();
-            tb.Text = $"Length: {file1.Length}\n";
-            tb.Text += file1;
+            tb.Text += $"{filename} loaded\n";
+            tb.Text += $"Length: {file1.Length}\n";
+            //tb.Text += file1;
         }
 
         private async Task ReadLenghtBytesFromFileAsync(string filename, int length)
@@ -125,6 +126,23 @@ namespace AsyncAwait._4
         private async void b6_Click(object sender, RoutedEventArgs e)
         {
             await ReadLenghtBytesFromFileAsync("File1.txt", 4096);
+        }
+
+        private async void b7_Click(object sender, RoutedEventArgs e)
+        {
+            Task[] t = new Task[2];
+            t[0] = ReadLenghtBytesFromFileAsync("File1.txt", 4096);
+            t[1] = ReadLenghtBytesFromFileAsync("File2.txt", 4096);
+
+            await Task.WhenAll(t);
+        }
+
+        private async void b8_Click(object sender, RoutedEventArgs e)
+        {
+            List<Task> tasks = new List<Task>();
+            foreach (var filename in new[] { "File1.txt", "File2.txt" })
+                tasks.Add(ReadFileToEndAsync(filename));
+            await Task.WhenAll(tasks);
         }
     }
 }

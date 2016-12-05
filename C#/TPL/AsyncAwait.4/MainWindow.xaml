@@ -21,6 +21,8 @@
             <Button Name="b4" Content="~~ b4 ~~" Click="b4_Click" HorizontalAlignment="Center"/>
             <Button Name="b5" Content="~~ b5 ~~" Click="b5_Click" HorizontalAlignment="Center"/>
             <Button Name="b6" Content="~~ b6 ~~" Click="b6_Click" HorizontalAlignment="Center"/>
+            <Button Name="b7" Content="~~ b7 ~~" Click="b7_Click" HorizontalAlignment="Center"/>
+            <Button Name="b8" Content="~~ b8 ~~" Click="b8_Click" HorizontalAlignment="Center"/>
         </StackPanel>
 
         <ScrollViewer  Grid.Column="1" VerticalScrollBarVisibility="Auto">
