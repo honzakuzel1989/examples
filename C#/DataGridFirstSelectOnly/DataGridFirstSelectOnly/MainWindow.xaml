@@ -1,0 +1,18 @@
+﻿<Window x:Class="DataGridFirstSelectOnly.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGridFirstSelectOnly"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Orientation="Vertical">
+        <Button Content="-" Click="Button_Minus_Click"/>
+        <Button Content="+" Click="Button_Plus_Click"/>
+        <!--SelectionUnit="FullRow" is most important thing in this case-->
+        <DataGrid ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" 
+                  SelectionMode="Single" SelectionUnit="FullRow" IsHitTestVisible="False">
+
+        </DataGrid>
+    </StackPanel>
+</Window>

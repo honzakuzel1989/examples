@@ -1,0 +1,36 @@
+﻿<Window x:Class="DataGridColumnsAutoWidth.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGridColumnsAutoWidth"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        <!--works well - columns are stretched to whole space -->
+        <!--<DataGrid ItemsSource="{Binding DgColors}" ColumnWidth="*"/>-->
+
+        <!-- works well - columns are stretched to whole space -->
+        <!--<DataGrid ItemsSource="{Binding DgColors}" ColumnWidth="*" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding A}" Header="A"/>
+                <DataGridTextColumn Binding="{Binding R}" Header="R"/>
+                <DataGridTextColumn Binding="{Binding G}" Header="G"/>
+                <DataGridTextColumn Binding="{Binding B}" Header="B"/>
+            </DataGrid.Columns>
+        </DataGrid>-->
+
+        <!-- works well - columns are stretched to whole space -->
+        <DataGrid ItemsSource="{Binding DgColors}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding A}" Header="A" Width="0.4*"/>
+                <DataGridTextColumn Binding="{Binding R}" Header="R" Width="0.2*"/>
+                <DataGridTextColumn Binding="{Binding G}" Header="G" Width="0.2*"/>
+                <DataGridTextColumn Binding="{Binding B}" Header="B" Width="0.2*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
