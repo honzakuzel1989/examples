@@ -19,7 +19,7 @@ namespace EnumeratedType
         private static List<DayOfWeek> DaysOfWeek = new List<DayOfWeek>();
 
         public int Order { get; private set; }
-        public string Name { get; private set; }
+        private string Name { get; set; }
 
         public static readonly DayOfWeek
             /* You can set name from resources (language specific - czech in this case) */

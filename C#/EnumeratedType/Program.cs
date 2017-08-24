@@ -10,6 +10,9 @@ namespace EnumeratedType
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(DayOfWeek.MONDAY);
+            Console.WriteLine(DayOfWeek.MONDAY.Order);
+            Console.WriteLine();
             Console.WriteLine(DayOfWeek.DaysByName().ToReadable());
             Console.WriteLine();
             Console.WriteLine(DayOfWeek.DaysOrder().ToReadable());
