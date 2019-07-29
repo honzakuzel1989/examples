@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AggressiveInlining", "AggressiveInlining.csproj", "{D894E18A-AE58-4C2E-BE8C-3F90F5E1D9BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D894E18A-AE58-4C2E-BE8C-3F90F5E1D9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D894E18A-AE58-4C2E-BE8C-3F90F5E1D9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D894E18A-AE58-4C2E-BE8C-3F90F5E1D9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D894E18A-AE58-4C2E-BE8C-3F90F5E1D9BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E56794AB-3817-4F1F-95C2-45E66E35C1F2}
+	EndGlobalSection
+EndGlobal
