@@ -4,25 +4,6 @@ namespace System.Linq
 {
     public static class Joins
     {
-        //public static IEnumerable<(TLeft l, TRight r)> InnerJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
-        //    Func<TLeft, int> keySelector,
-        //    IEnumerable<TRight> right,
-        //    Func<TRight, int> fkSelector)
-        //{
-        //    var rdict = right.ToLookup(fkSelector);
-        //    foreach (var l in left)
-        //    {
-        //        var lkey = keySelector(l);
-        //        if (rdict.Contains(lkey))
-        //        {
-        //            foreach (var r in rdict[lkey])
-        //            {
-        //                yield return (l, r);
-        //            }
-        //        }
-        //    }
-        //}
-
         public static IEnumerable<(TLeft l, TRight r)> InnerJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
             IEnumerable<TRight> right,
             Func<TLeft, TRight, bool> where)
@@ -38,30 +19,6 @@ namespace System.Linq
                 }
             }
         }
-
-        //public static IEnumerable<(TLeft l, TRight r)> LeftJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
-        //    Func<TLeft, int> keySelector,
-        //    IEnumerable<TRight> right,
-        //    Func<TRight, int> fkSelector,
-        //    Func<TRight> nullObjectFactory)
-        //{
-        //    var rdict = right.ToLookup(fkSelector);
-        //    foreach (var l in left)
-        //    {
-        //        var lkey = keySelector(l);
-        //        if (rdict.Contains(lkey))
-        //        {
-        //            foreach (var r in rdict[lkey])
-        //            {
-        //                yield return (l, r);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            yield return (l, nullObjectFactory());
-        //        }
-        //    }
-        //}
 
         public static IEnumerable<(TLeft l, TRight r)> LeftJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
             IEnumerable<TRight> right,
@@ -100,30 +57,6 @@ namespace System.Linq
             return LeftJoin(left, right, default(TRight), where);
         }
 
-        //public static IEnumerable<(TLeft l, TRight r)> RightJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
-        //    Func<TLeft, int> pkSelector,
-        //    IEnumerable<TRight> right,
-        //    Func<TRight, int> fkSelector,
-        //    Func<TLeft> nullObjectFactory)
-        //{
-        //    var ldict = left.ToLookup(pkSelector);
-        //    foreach (var r in right)
-        //    {
-        //        var rkey = fkSelector(r);
-        //        if (ldict.Contains(rkey))
-        //        {
-        //            foreach (var l in ldict[rkey])
-        //            {
-        //                yield return (l, r);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            yield return (nullObjectFactory(), r);
-        //        }
-        //    }
-        //}
-
         public static IEnumerable<(TLeft l, TRight r)> RightJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
             Func<TLeft> nullObjectFactory,
             IEnumerable<TRight> right,
@@ -160,17 +93,6 @@ namespace System.Linq
         {
             return RightJoin(left, default(TLeft), right, where);
         }
-
-        //public static IEnumerable<(TLeft l, TRight r)> OuterJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
-        //    Func<TLeft, int> keySelector,
-        //    Func<TLeft> lNullObjectFactory,
-        //    IEnumerable<TRight> right,
-        //    Func<TRight, int> fkSelector,
-        //    Func<TRight> rNullObjectFactory)
-        //{
-        //    return LeftJoin(left, keySelector, right, fkSelector, rNullObjectFactory)
-        //        .Concat(RightJoin(left, keySelector, right, fkSelector, lNullObjectFactory));
-        //}
 
         public static IEnumerable<(TLeft l, TRight r)> OuterJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
             Func<TLeft> lNullObjectFactory,

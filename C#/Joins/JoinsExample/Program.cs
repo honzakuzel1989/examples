@@ -38,42 +38,26 @@ namespace JoinsExample
             // --
 
             Console.WriteLine("=== INNER");
-            //var innerj1 = companies.InnerJoin(c => c.ID, persosns, p => p.Company_ID);
-            //foreach (var item in innerj1)
-            //    Console.WriteLine(item);
-
-            var innerj2 = companies.InnerJoin(persosns, (c, p) => c.ID == p.Company_ID);
-            foreach (var item in innerj2)
+            var innerj1 = companies.InnerJoin(persosns, (c, p) => c.ID == p.Company_ID);
+            foreach (var item in innerj1)
                 Console.WriteLine(item);
 
             Console.WriteLine();
             Console.WriteLine("=== LEFT");
-            //var leftj1 = companies.LeftJoin(c => c.ID, persosns, p => p.Company_ID, () => Person.NullObject);
-            //foreach (var item in leftj1)
-            //    Console.WriteLine(item);
-
-            var leftj2 = companies.LeftJoin(persosns, Person.NullObject, (c, p) => c.ID == p.Company_ID);
-            foreach (var item in leftj2)
+            var leftj1 = companies.LeftJoin(persosns, Person.NullObject, (c, p) => c.ID == p.Company_ID);
+            foreach (var item in leftj1)
                 Console.WriteLine(item);
 
             Console.WriteLine();
             Console.WriteLine("=== RIGHT");
-            //var rightj1 = companies.RightJoin(c => c.ID, persosns, p => p.Company_ID, () => Company.NullObject);
-            //foreach (var item in rightj1)
-            //    Console.WriteLine(item);
-
-            var rightj2 = companies.RightJoin(Company.NullObject, persosns, (c, p) => c.ID == p.Company_ID);
-            foreach (var item in rightj2)
+            var rightj1 = companies.RightJoin(Company.NullObject, persosns, (c, p) => c.ID == p.Company_ID);
+            foreach (var item in rightj1)
                 Console.WriteLine(item);
 
             Console.WriteLine();
             Console.WriteLine("=== OUTER");
-            //var outerj1 = companies.OuterJoin(c => c.ID, () => Company.NullObject, persosns, p => p.Company_ID, () => Person.NullObject);
-            //foreach (var item in outerj1)
-            //    Console.WriteLine(item);
-
-            var outerj2 = companies.OuterJoin(Company.NullObject, persosns, Person.NullObject, (c, p) => c.ID == p.Company_ID);
-            foreach (var item in outerj2)
+            var outerj1 = companies.OuterJoin(Company.NullObject, persosns, Person.NullObject, (c, p) => c.ID == p.Company_ID);
+            foreach (var item in outerj1)
                 Console.WriteLine(item);
 
             Console.ReadLine();
