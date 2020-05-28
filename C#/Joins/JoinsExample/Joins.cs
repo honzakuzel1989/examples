@@ -131,9 +131,9 @@ namespace System.Linq
 
         public static IEnumerable<(TLeft l, TRight r)> OuterJoin<TLeft, TRight>(this IEnumerable<TLeft> left,
             IEnumerable<TRight> right,
-            Func<TLeft, TRight, bool> on)
+            Func<TLeft, TRight, bool> on) where TLeft : new() where TRight : new()
         {
-            return OuterJoin(left, default(TLeft), right, default(TRight), on);
+            return OuterJoin(left, new TLeft(), right, new TRight(), on);
         }
     }
 }
